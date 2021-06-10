@@ -1,0 +1,53 @@
+@import "_vars" , "_nav";
+
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: lighten($color: $primary, $amount: 20%);
+    h1{
+        text-align: center;
+        font-family: rightous;
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    p{
+        text-align: center;
+        margin: 4rem 0 0 0;
+        font-family: sansita;
+    }
+    div{
+        &.list{
+        background-color: $secondary;
+        margin:  0 10rem 0 10rem;
+        border-radius: 1rem;
+        border: darken($color: $secondary, $amount: 40%);
+        li{
+            font-family: sansita;
+            margin: 0 0 0 5rem;
+        }
+    }
+    }
+}
+
+footer{
+    background-color: darken($color: $secondary, $amount: 20%);
+    h4{
+        text-align: left;
+        font-family: sansita;
+        font-size: small;
+        padding-left: 2rem;
+    }
+    h5{
+        text-align: right;
+        font-family: yesteryear;
+        font-size: medium;
+        padding-right: 3rem;
+    }
+}

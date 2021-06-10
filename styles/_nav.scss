@@ -1,0 +1,9 @@
+@import "_vars";
+
+nav{
+    display:grid;
+    align-items: flex-start;
+    height: 20rem;
+    width: 5rem;
+    background-color: darken($color: $primary, $amount: 15%);
+}
