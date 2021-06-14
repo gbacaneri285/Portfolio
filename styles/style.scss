@@ -10,44 +10,112 @@ body,html {
 }
 
 body {
-    background-color: lighten($color: $primary, $amount: 20%);
+    background-color: lighten($color: $primary, $amount: 5%);
     h1{
         text-align: center;
         font-family: rightous;
         font-weight: bold;
         font-size: xx-large;
+        text-decoration: underline;
     }
     p{
-        text-align: center;
-        margin: 4rem 0 0 0;
         font-family: sansita;
-    }
-    div{
-        &.list{
-        background-color: $secondary;
-        margin:  0 10rem 0 10rem;
-        border-radius: 1rem;
-        border: darken($color: $secondary, $amount: 40%);
-        li{
-            font-family: sansita;
-            margin: 0 0 0 5rem;
-        }
-    }
+        font-weight: 800;
+        font-size: larger;
+        margin-left: 2rem;
     }
 }
 
 footer{
     background-color: darken($color: $secondary, $amount: 20%);
+    height: 12rem;
+    width: 100%;
+    margin-top: 30rem;
+    color:white;
+    text-align: center;
     h4{
         text-align: left;
         font-family: sansita;
         font-size: small;
         padding-left: 2rem;
+        text-align: center;
     }
     h5{
+        color: black;
         text-align: right;
         font-family: yesteryear;
-        font-size: medium;
+        font-size: large;
         padding-right: 3rem;
+    }
+    button{ 
+        .social{
+            cursor:pointer;
+            margin-left: 1rem;
+            margin-top: 5px;
+            align-content: center;
+        }
+    }
+}
+
+//media query for footer - to make sure that the border is the correct size when shrunk//
+@media screen and (max-width:700px){
+    footer{
+        height: 17rem;
+        width: 100%;
+        h4{
+            font-size: small;
+            font-weight: bold;
+            text-align: center;
+        }
+        h5{
+            font-size: smaller;
+            text-align: end;
+        }
+        button{
+            &.social{
+            width: 4.5rem;
+            height: 4rem;
+            font-size: small;
+            color: white;
+            border-radius: 3rem;
+            margin-left: 2rem;
+            }
+        }
+    }
+}
+
+//colors for social media buttons//
+$colors:(
+    "insta":hotpink,
+    "facebook":royalblue,
+    "twitter": skyblue,
+    "youtube": red,
+    "github":black
+);
+
+@each $name, $color in $colors{
+    &.#{$name} {
+        width: 6rem;
+        height: 2rem;
+        cursor: pointer;
+        margin-left: 2rem;
+        background-color: $color;
+        border: $color;
+        border-radius: 4px;
+        transform: scale(1,1);
+        transition: 2s ease-in;
+        box-shadow: 2px 2px darkslategray;
+        color:white;
+        &:hover{
+            transform: scale(1.1,1.1);
+            transition: 2s ease-out;
+            background-color: lighten($color, $amount: 15%);
+            border: lighten($color, $amount: 15%);   
+        }
+        &:active{
+            transform: scale(.8,.8);
+            transition: 2s ease-in;
+            background-color: darken($color, $amount: 15%);
+        }
     }
 }

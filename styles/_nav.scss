@@ -1,9 +1,40 @@
 @import "_vars";
 
+//side nav bar -- still in progress--
 nav{
     display:grid;
     align-items: flex-start;
     height: 20rem;
     width: 5rem;
     background-color: darken($color: $primary, $amount: 15%);
+    a{
+        color:black;
+        font-family: sansita;
+        text-decoration: none;
+        display: inline-block;
+        padding:1rem;
+        margin-left: auto;
+        &:last-of-type{
+            display: none;
+            margin-left: auto;
+        }
+        &:hover{
+            transition: 3s;
+            background-color: $primary;
+        }
+    }
+}
+
+@media screen and (min-width:800px){
+    nav{
+        a{
+            &:first-of-type{
+                line-height: 2;
+            }
+            &:not(:first-of-type){
+                display:none;
+            }
+
+        }
+    }
 }
