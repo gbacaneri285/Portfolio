@@ -16,11 +16,7 @@ nav a {
   display: inline-block;
   padding: 1rem;
   margin-left: auto;
-}
-
-nav a:last-of-type {
-  display: none;
-  margin-left: auto;
+  position: fixed;
 }
 
 nav a:hover {
@@ -58,13 +54,15 @@ body h1 {
   font-weight: bold;
   font-size: xx-large;
   text-decoration: underline;
+  border: 2px solid #E1B941;
+  background-color: #E1B941;
 }
 
 body p {
   font-family: sansita;
   font-weight: 800;
   font-size: larger;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 footer {
@@ -102,16 +100,16 @@ footer button .social {
 
 @media screen and (max-width: 700px) {
   footer {
-    height: 17rem;
+    height: 19rem;
     width: 100%;
   }
   footer h4 {
-    font-size: small;
+    font-size: medium;
     font-weight: bold;
     text-align: center;
   }
   footer h5 {
-    font-size: smaller;
+    font-size: small;
     text-align: end;
   }
   footer button.social {
@@ -121,6 +119,40 @@ footer button .social {
     color: white;
     border-radius: 3rem;
     margin-left: 2rem;
+  }
+  footer button.social:hover {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: none;
+    transition: none;
+  }
+  footer button.social:active {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  footer {
+    height: 16.5rem;
+    width: 100%;
+  }
+  footer h4 {
+    font-size: larger;
+    font-weight: bold;
+    text-align: start;
+  }
+  footer h5 {
+    font-size: medium;
+  }
+  footer button.social {
+    width: 7rem;
+    height: 3rem;
+    font-size: medium;
+    border-radius: 5px;
+    margin-left: 8rem;
   }
 }
 

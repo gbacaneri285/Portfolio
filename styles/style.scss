@@ -17,12 +17,14 @@ body {
         font-weight: bold;
         font-size: xx-large;
         text-decoration: underline;
+        border: 2px solid $secondary;
+        background-color: $secondary;
     }
     p{
         font-family: sansita;
         font-weight: 800;
         font-size: larger;
-        margin-left: 2rem;
+        margin-left: 3rem;
     }
 }
 
@@ -58,17 +60,17 @@ footer{
 }
 
 //media query for footer - to make sure that the border is the correct size when shrunk//
-@media screen and (max-width:700px){
+@media screen and (max-width:700px ){
     footer{
-        height: 17rem;
+        height: 19rem;
         width: 100%;
         h4{
-            font-size: small;
+            font-size: medium;
             font-weight: bold;
             text-align: center;
         }
         h5{
-            font-size: smaller;
+            font-size: small;
             text-align: end;
         }
         button{
@@ -79,6 +81,39 @@ footer{
             color: white;
             border-radius: 3rem;
             margin-left: 2rem;
+            &:hover{
+                transform: scale(1,1);
+                transition: none;
+            }
+            &:active{
+                transform: scale(1,1);
+                transition: none;
+            }
+            }
+        }
+    }
+}
+
+//media query for larger screens//
+@media screen and (min-width: 1500px){
+    footer{
+        height: 16.5rem;
+        width:100%;
+        h4{
+            font-size: larger;
+            font-weight: bold;
+            text-align: start;
+        }
+        h5{
+            font-size: medium;
+        }
+        button{
+            &.social{
+                width: 7rem;
+                height: 3rem;
+                font-size: medium;
+                border-radius: 5px;
+                margin-left: 8rem;
             }
         }
     }
@@ -92,7 +127,7 @@ $colors:(
     "youtube": red,
     "github":black
 );
-
+//each selector for button creators//
 @each $name, $color in $colors{
     &.#{$name} {
         width: 6rem;
