@@ -4,20 +4,21 @@
 nav{
     display:grid;
     align-items: flex-start;
+    font-family: sansita;
+    color: white;
     height: 20rem;
     width: 5rem;
     background-color: darken($color: $primary, $amount: 15%);
     a{
-        color:black;
         font-family: sansita;
         text-decoration: none;
         display: inline-block;
-        padding:1rem;
+        padding: 1rem;
         margin-left: auto;
         position: fixed;
         &:hover{
             transition: 3s;
-            background-color: $primary;
+            background-color: lighten($primary, $amount: 15%);
         }
     }
 }
@@ -31,7 +32,16 @@ nav{
             &:not(:first-of-type){
                 display:none;
             }
-
+        }
+        &.reponsive{
+            display:block;
+            a{
+                text-align: block;
+                display: block;
+                &:last-of-type{
+                    position: fixed;
+                }
+            }
         }
     }
 }

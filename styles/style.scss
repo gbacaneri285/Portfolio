@@ -26,6 +26,9 @@ body {
         font-size: larger;
         margin-left: 3rem;
     }
+    nav{
+        padding-left: 0;
+    }
 }
 
 footer{
@@ -123,11 +126,11 @@ footer{
 $colors:(
     "insta":hotpink,
     "facebook":royalblue,
-    "twitter": skyblue,
+    "twitter": #53BCF6,
     "youtube": red,
     "github":black
 );
-//each selector for button creators//
+//each selector for social media button creators//
 @each $name, $color in $colors{
     &.#{$name} {
         width: 6rem;
@@ -150,7 +153,7 @@ $colors:(
         &:active{
             transform: scale(.8,.8);
             transition: 2s ease-in;
-            background-color: darken($color, $amount: 15%);
+            background-color: darken($color, $amount: 20%);
         }
     }
 }

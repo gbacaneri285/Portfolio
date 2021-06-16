@@ -4,13 +4,14 @@ nav {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  font-family: sansita;
+  color: white;
   height: 20rem;
   width: 5rem;
   background-color: #1d44b8;
 }
 
 nav a {
-  color: black;
   font-family: sansita;
   text-decoration: none;
   display: inline-block;
@@ -22,7 +23,7 @@ nav a {
 nav a:hover {
   -webkit-transition: 3s;
   transition: 3s;
-  background-color: #4169E1;
+  background-color: #839deb;
 }
 
 @media screen and (min-width: 800px) {
@@ -31,6 +32,16 @@ nav a:hover {
   }
   nav a:not(:first-of-type) {
     display: none;
+  }
+  nav.reponsive {
+    display: block;
+  }
+  nav.reponsive a {
+    text-align: block;
+    display: block;
+  }
+  nav.reponsive a:last-of-type {
+    position: fixed;
   }
 }
 
@@ -63,6 +74,10 @@ body p {
   font-weight: 800;
   font-size: larger;
   margin-left: 3rem;
+}
+
+body nav {
+  padding-left: 0;
 }
 
 footer {
@@ -187,7 +202,7 @@ footer button .social {
           transform: scale(0.8, 0.8);
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-  background-color: #ff1d8e;
+  background-color: #ff0381;
 }
 
 .facebook {
@@ -221,7 +236,7 @@ footer button .social {
           transform: scale(0.8, 0.8);
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-  background-color: #1d44b8;
+  background-color: #1a3ca2;
 }
 
 .twitter {
@@ -229,8 +244,8 @@ footer button .social {
   height: 2rem;
   cursor: pointer;
   margin-left: 2rem;
-  background-color: skyblue;
-  border: skyblue;
+  background-color: #53BCF6;
+  border: #53BCF6;
   border-radius: 4px;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
@@ -246,8 +261,8 @@ footer button .social {
           transform: scale(1.1, 1.1);
   -webkit-transition: 2s ease-out;
   transition: 2s ease-out;
-  background-color: #c9e9f6;
-  border: #c9e9f6;
+  background-color: #9cd8fa;
+  border: #9cd8fa;
 }
 
 .twitter:active {
@@ -255,7 +270,7 @@ footer button .social {
           transform: scale(0.8, 0.8);
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-  background-color: #45b3e0;
+  background-color: #0b8fd8;
 }
 
 .youtube {
@@ -289,7 +304,7 @@ footer button .social {
           transform: scale(0.8, 0.8);
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-  background-color: #b30000;
+  background-color: #990000;
 }
 
 .github {
