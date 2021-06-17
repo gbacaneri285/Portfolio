@@ -1,20 +1,22 @@
 @import "_vars";
 
-//side nav bar -- still in progress--
+//side nav bar -- needs to be worked on to fix overlapping links--
 nav{
-    display:grid;
+    display: grid;
     align-items: flex-start;
     font-family: sansita;
     color: white;
+    border: 2px solid black;
+    border-radius: 6px;
     height: 20rem;
     width: 5rem;
-    background-color: darken($color: $primary, $amount: 15%);
+    position: fixed;
+    background-color: darken($color: $primary, $amount: 10%);
     a{
         font-family: sansita;
         text-decoration: none;
         display: inline-block;
-        padding: 1rem;
-        margin-left: auto;
+        margin-left: 5px;
         position: fixed;
         &:hover{
             transition: 3s;
@@ -23,25 +25,4 @@ nav{
     }
 }
 
-@media screen and (min-width:800px){
-    nav{
-        a{
-            &:first-of-type{
-                line-height: 2;
-            }
-            &:not(:first-of-type){
-                display:none;
-            }
-        }
-        &.reponsive{
-            display:block;
-            a{
-                text-align: block;
-                display: block;
-                &:last-of-type{
-                    position: fixed;
-                }
-            }
-        }
-    }
-}
+//needs media query for smaller screens or phones, needs to be in the top corner//

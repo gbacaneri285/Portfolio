@@ -9,6 +9,7 @@ body,html {
     margin: 0;
 }
 
+//everything inside of the body tag//
 body {
     background-color: lighten($color: $primary, $amount: 5%);
     h1{
@@ -28,9 +29,14 @@ body {
     }
     nav{
         padding-left: 0;
+        a{
+            text-decoration: none;
+            margin: 0 3px 0 3px;
+        }
     }
 }
 
+//The footer//
 footer{
     background-color: darken($color: $secondary, $amount: 20%);
     height: 12rem;

@@ -6,17 +6,19 @@ nav {
           align-items: flex-start;
   font-family: sansita;
   color: white;
+  border: 2px solid black;
+  border-radius: 6px;
   height: 20rem;
   width: 5rem;
-  background-color: #1d44b8;
+  position: fixed;
+  background-color: #214cce;
 }
 
 nav a {
   font-family: sansita;
   text-decoration: none;
   display: inline-block;
-  padding: 1rem;
-  margin-left: auto;
+  margin-left: 5px;
   position: fixed;
 }
 
@@ -24,25 +26,6 @@ nav a:hover {
   -webkit-transition: 3s;
   transition: 3s;
   background-color: #839deb;
-}
-
-@media screen and (min-width: 800px) {
-  nav a:first-of-type {
-    line-height: 2;
-  }
-  nav a:not(:first-of-type) {
-    display: none;
-  }
-  nav.reponsive {
-    display: block;
-  }
-  nav.reponsive a {
-    text-align: block;
-    display: block;
-  }
-  nav.reponsive a:last-of-type {
-    position: fixed;
-  }
 }
 
 * {
@@ -78,6 +61,11 @@ body p {
 
 body nav {
   padding-left: 0;
+}
+
+body nav a {
+  text-decoration: none;
+  margin: 0 3px 0 3px;
 }
 
 footer {
